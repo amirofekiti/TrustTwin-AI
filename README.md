@@ -64,6 +64,20 @@ python -m unittest discover -s tests -v
 python cli/run_decision_engine.py examples/green_example.json
 ```
 
+## Interactive research demonstrator
+
+Phase 9C adds a local browser-based **TrustTwin Digital Twin Trust Console**. The browser sends evidence to a Python HTTP service that imports the frozen `trusttwin.decision_engine`; GREEN/AMBER/RED decisions therefore come from the same policy code used by the research package.
+
+```bash
+python demo/server.py
+```
+
+Then open `http://127.0.0.1:8000`.
+
+The included scenarios are simulated demonstrations of research-observed regimes. Their probability vectors are explicitly illustrative; the associated evidence notes point to verified phase findings.
+
+See [demo/README.md](demo/README.md) and [docs/demonstrator.md](docs/demonstrator.md).
+
 ## Datasets
 
 Primary development dataset:

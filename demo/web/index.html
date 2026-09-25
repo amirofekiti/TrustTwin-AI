@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TrustTwin AI — Digital Twin Trust Console</title>
+  <meta name="description" content="TrustTwin AI Phase 9C research demonstrator">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">INDUSTRIAL AI RESEARCH DEMONSTRATOR</div>
+        <h1>TrustTwin AI</h1>
+        <p class="subtitle">Digital Twin Trust Console</p>
+      </div>
+      <div class="header-meta">
+        <span class="pill">Policy v1</span>
+        <span class="pill neutral">Human authority retained</span>
+      </div>
+    </header>
+
+    <div class="research-banner">
+      <strong>Simulated demonstrator.</strong>
+      Scenario probability vectors are illustrative. Decision logic is executed by the repository's frozen Python TrustTwin decision engine.
+    </div>
+
+    <main class="grid">
+      <section class="panel controls-panel">
+        <div class="panel-heading">
+          <div>
+            <span class="panel-kicker">SCENARIO CONTROL</span>
+            <h2>Digital Twin Inputs</h2>
+          </div>
+        </div>
+
+        <label class="field">
+          <span>Research scenario</span>
+          <select id="scenarioSelect"></select>
+        </label>
+
+        <div class="machine-card">
+          <div class="machine-visual">
+            <div class="rotor"><div class="rotor-core"></div></div>
+          </div>
+          <div>
+            <div id="machineName" class="machine-name">—</div>
+            <div id="datasetContext" class="muted">—</div>
+            <div id="operatingPoint" class="muted">—</div>
+          </div>
+        </div>
+
+        <div class="field-grid">
+          <label class="field">
+            <span>Domain support</span>
+            <select id="domainStatus">
+              <option>SUPPORTED</option>
+              <option>OUTSIDE</option>
+              <option>UNKNOWN</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Sensor health</span>
+            <select id="sensorStatus">
+              <option>HEALTHY</option>
+              <option>DEGRADED</option>
+              <option>UNKNOWN</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>OOD / novelty</span>
+            <select id="oodStatus">
+              <option>KNOWN</option>
+              <option>NOVEL</option>
+              <option>UNKNOWN</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Base diagnosis</span>
+            <input id="baseDiagnosis" type="text" autocomplete="off">
+          </label>
+        </div>
+
+        <label class="field">
+          <span>Conformal prediction set <small>(comma separated)</small></span>
+          <input id="conformalSet" type="text" autocomplete="off">
+        </label>
+
+        <label class="field">
+          <span>Auxiliary warnings <small>(comma separated)</small></span>
+          <input id="warnings" type="text" autocomplete="off" placeholder="Optional">
+        </label>
+
+        <button id="evaluateButton" class="primary-button">Evaluate trust state</button>
+      </section>
+
+      <section class="panel decision-panel">
+        <div class="panel-heading">
+          <div>
+            <span class="panel-kicker">RUNTIME DECISION</span>
+            <h2>Trust State</h2>
+          </div>
+          <span id="policyVersion" class="policy-version">—</span>
+        </div>
+
+        <div id="decisionHero" class="decision-hero neutral-state">
+          <div id="statusOrb" class="status-orb"><span>—</span></div>
+          <div>
+            <div id="decisionTitle" class="decision-title">Awaiting evaluation</div>
+            <div id="decisionSubtitle" class="decision-subtitle">Select a scenario or modify the evidence.</div>
+          </div>
+        </div>
+
+        <div class="decision-facts">
+          <div class="fact">
+            <span>Issued diagnosis</span>
+            <strong id="issuedDiagnosis">—</strong>
+          </div>
+          <div class="fact">
+            <span>Human review</span>
+            <strong id="reviewRequired">—</strong>
+          </div>
+          <div class="fact">
+            <span>Autonomous maintenance</span>
+            <strong id="autonomousMaintenance">NOT AUTHORISED</strong>
+          </div>
+        </div>
+
+        <div class="reason-section">
+          <span class="section-label">Reason codes</span>
+          <div id="reasonCodes" class="reason-codes"></div>
+        </div>
+
+        <div class="reason-section">
+          <span class="section-label">Candidate classes</span>
+          <div id="candidateClasses" class="reason-codes"></div>
+        </div>
+      </section>
+
+      <section class="panel evidence-panel">
+        <div class="panel-heading">
+          <div>
+            <span class="panel-kicker">TRUST EVIDENCE</span>
+            <h2>Gate Status</h2>
+          </div>
+        </div>
+        <div id="gateList" class="gate-list"></div>
+      </section>
+
+      <section class="panel probability-panel">
+        <div class="panel-heading">
+          <div>
+            <span class="panel-kicker">MODEL VIEW</span>
+            <h2>Illustrative class probabilities</h2>
+          </div>
+          <span class="pill warning">Not raw experimental output</span>
+        </div>
+        <div id="probabilityBars" class="probability-bars"></div>
+      </section>
+
+      <section class="panel research-panel">
+        <div class="panel-heading">
+          <div>
+            <span class="panel-kicker">RESEARCH PROVENANCE</span>
+            <h2>Why this scenario matters</h2>
+          </div>
+        </div>
+        <p id="researchNote" class="research-note">—</p>
+        <div class="research-footer">
+          <span id="targetLabel">Target: —</span>
+          <span>Explanation evidence is offline-only in the frozen architecture.</span>
+        </div>
+      </section>
+
+      <section class="panel audit-panel">
+        <div class="panel-heading">
+          <div>
+            <span class="panel-kicker">AUDIT TRAIL</span>
+            <h2>Recent decisions</h2>
+          </div>
+        </div>
+        <div id="auditLog" class="audit-log">
+          <div class="empty-log">No decisions yet.</div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>TrustTwin AI research software • Not safety-certified</span>
+      <span>Maintenance authority remains with an authorised human operator.</span>
+    </footer>
+  </div>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
