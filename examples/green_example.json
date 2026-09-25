@@ -1,0 +1,8 @@
+{
+  "domain_status": "SUPPORTED",
+  "sensor_status": "HEALTHY",
+  "ood_status": "KNOWN",
+  "conformal_set": ["bearing_bpfi"],
+  "base_diagnosis": "bearing_bpfi",
+  "auxiliary_warnings": []
+}

@@ -1,0 +1,37 @@
+{
+  "version": "TrustTwin-runtime-policy-v1",
+  "green": {
+    "requirements": [
+      "domain_status == SUPPORTED",
+      "sensor_status == HEALTHY",
+      "ood_status == KNOWN",
+      "len(conformal_set) == 1",
+      "base_diagnosis absent or equals singleton",
+      "no auxiliary warnings"
+    ],
+    "autonomous_maintenance_allowed": false
+  },
+  "amber": {
+    "conditions": [
+      "multi-class conformal set with upstream gates passed",
+      "non-fatal auxiliary warning with upstream gates passed"
+    ]
+  },
+  "red": {
+    "conditions": [
+      "domain outside/unknown",
+      "sensor degraded/unknown",
+      "OOD novel/unknown",
+      "empty conformal set",
+      "base diagnosis conflicts with singleton"
+    ]
+  },
+  "scalar_trust_score": false,
+  "temperature_scaled_probability_gate": false,
+  "explanation_stability_runtime_gate": false,
+  "conformal_candidate": {
+    "method": "global LAC",
+    "nominal_coverage": 0.95,
+    "scope": "in-domain only"
+  }
+}

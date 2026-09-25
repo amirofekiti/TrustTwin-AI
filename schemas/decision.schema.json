@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TrustTwin decision output",
+  "type": "object",
+  "properties": {
+    "level": {"enum": ["GREEN", "AMBER", "RED"]},
+    "issued_diagnosis": {"type": ["string", "null"]},
+    "candidate_classes": {"type": "array", "items": {"type": "string"}},
+    "reason_codes": {"type": "array", "items": {"type": "string"}},
+    "human_review_required": {"type": "boolean"},
+    "autonomous_maintenance_allowed": {"const": false}
+  }
+}

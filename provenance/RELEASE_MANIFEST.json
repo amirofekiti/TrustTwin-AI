@@ -1,0 +1,11 @@
+{
+  "project": "TrustTwin AI",
+  "repository_version": "0.1.0",
+  "build_date": "2026-09-25",
+  "result_bundles_sha256_recorded": 19,
+  "experiment_packs_sha256_recorded": 20,
+  "raw_datasets_included": false,
+  "large_result_bundles_included": false,
+  "decision_policy": "hierarchical; no scalar trust score",
+  "in_domain_abstention_candidate": "global 95% LAC split conformal"
+}

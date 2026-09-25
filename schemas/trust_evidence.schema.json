@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TrustTwin evidence input",
+  "type": "object",
+  "required": ["domain_status", "sensor_status", "ood_status", "conformal_set"],
+  "properties": {
+    "domain_status": {"enum": ["SUPPORTED", "OUTSIDE", "UNKNOWN"]},
+    "sensor_status": {"enum": ["HEALTHY", "DEGRADED", "UNKNOWN"]},
+    "ood_status": {"enum": ["KNOWN", "NOVEL", "UNKNOWN"]},
+    "conformal_set": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "base_diagnosis": {"type": ["string", "null"]},
+    "auxiliary_warnings": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}

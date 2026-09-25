@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trusttwin-ai"
+version = "0.1.0"
+description = "Hierarchical trust-aware fault diagnosis policy for industrial digital twins."
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Opeyemi Osho"}]
+keywords = ["digital twin", "fault diagnosis", "trustworthy AI", "conformal prediction", "predictive maintenance"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,8 @@
+{
+  "domain_status": "OUTSIDE",
+  "sensor_status": "HEALTHY",
+  "ood_status": "UNKNOWN",
+  "conformal_set": [],
+  "base_diagnosis": null,
+  "auxiliary_warnings": []
+}

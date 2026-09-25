@@ -1,0 +1,22 @@
+phase,experiment,dataset,design,status,finding
+2A,Dataset inventory,NLN-EMP,Archive/file inventory and leakage planning,Completed,"Source hierarchy, missing groups and confounds established"
+2B,Pilot benchmark,NLN-EMP Motor-2,Pilot speed/domain shift,Completed,Large speed/domain shift observed
+2B1,Order-domain features,NLN-EMP Motor-2,Held-speed pilot,Completed,Order representation helped; pump channel remained weak
+2B2,Robust order-envelope,NLN-EMP Motor-2,3-class held-speed,Completed,Motor NDE ch1 selected; nominal RPM retained
+2B3,Per-trace speed estimate,NLN-EMP Motor-2,Nominal vs estimated RPM,Rejected,Estimated RPM underperformed nominal RPM
+2C,Expanded 11-class benchmark,NLN-EMP Motor-2,Leave-one-speed-out,Completed,Frozen vibration representation selected
+3C,Sensor stress,NLN-EMP Motor-2,Synthetic corruption,Completed,Severe corruption can be confidently wrong
+3D,Sensor health,NLN-EMP Motor-2,Dedicated corruption detector,Completed,Sensor health and prediction error are distinct
+3E,Explanation stability,NLN-EMP Motor-2,Paired clean/corrupted explanations,Completed,Useful offline robustness evidence
+3F,Generic explanation prototype,NLN-EMP Motor-2,Runtime gate,Rejected,Unacceptable clean false rejection
+3G,Speed-conditioned prototype,NLN-EMP Motor-2,Predeclared stopping rule,Rejected,Failed stopping criteria
+4A,Fault-family OOD,NLN-EMP Motor-2,Leave-one-fault-family-out,Completed,Strong inside represented operation
+4B,Joint speed + fault OOD,NLN-EMP Motor-2,Unseen speed and fault,Completed,OOD confounds speed shift with novelty
+5A,Multi-seed repeatability,NLN-EMP Motor-2,10 RF seeds,Completed,Representation advantage stable
+5B,Multi-condition resampling,NLN-EMP Motor-2,10 source-trace resamples,Completed,Advantage persists; 100% speed difficult
+5C,Condition holdout,NLN-EMP Motor-2,Leave-one-condition-out,Completed,Bearing transfer strong; other families conditional
+6A,Multimodal late fusion,NLN-EMP Motor-2,Unsynchronised condition-level fusion,Rejected,Current did not improve vibration overall
+7A,In-domain temperature calibration,NLN-EMP Motor-2,Trace train/cal/test,Rejected,Temperature saturation and degenerate coverage
+7B,Split conformal,NLN-EMP Motor-2,Global/Mondrian LAC,Completed,Global 95% LAC retained as candidate gate
+8A,Independent hydraulic replication,UCI Hydraulic,Block-safe workflow replication,Completed,Review burden adapts to competence
+9A,Decision engine,Software,Deterministic hierarchy,Completed,9/9 unit tests passed

@@ -1,0 +1,8 @@
+{
+  "domain_status": "SUPPORTED",
+  "sensor_status": "HEALTHY",
+  "ood_status": "KNOWN",
+  "conformal_set": ["healthy", "impeller"],
+  "base_diagnosis": "impeller",
+  "auxiliary_warnings": []
+}
