@@ -21,10 +21,24 @@ jobs:
         run: |
           set -euo pipefail
           cat bootstrap_xz/chunk_*.b64 > /tmp/release.b64
-          base64 -d /tmp/release.b64 > /tmp/release.tar.xz
+          base64 --decode --ignore-garbage /tmp/release.b64 > /tmp/release.tar.xz
+          xz --test /tmp/release.tar.xz
           mkdir -p /tmp/release
           tar -xJf /tmp/release.tar.xz -C /tmp/release
+          test -f /tmp/release/TrustTwin-AI/README.md
           rsync -a --delete --exclude='.git/' /tmp/release/TrustTwin-AI/ ./
+
+      - name: Verify release structure
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f README.md
+          test -f CITATION.cff
+          test -f src/trusttwin/decision_engine.py
+          test -f tests/test_decision_engine.py
+          test -f experiments/EXPERIMENT_REGISTRY.csv
+          test -f provenance/result_bundles.sha256
+          python -m unittest discover -s tests -v
 
       - name: Commit research release
         shell: bash
