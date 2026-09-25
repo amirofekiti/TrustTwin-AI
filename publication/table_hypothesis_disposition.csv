@@ -1,0 +1,6 @@
+Hypothesis,Original proposition,Disposition,Evidence,Boundary
+H1,Vibration + electrical improves over the best single modality,Not supported in tested design,Phase 6A,"Unsynchronised condition-level late fusion; one phase-current channel"
+H2,Ordinary calibration/UQ improves reliability under corruption/shift,Not supported in original simple form,"Phases 3A, 7A","Temperature scaling failed under shift and degenerated in-domain; conformal retained instead"
+H3,Uncertainty/OOD abstention reduces unsafe accepted predictions,Conditionally supported,"Phases 4A, 4B, 7B, 8A","Requires hierarchy: domain support before novelty; conformal is in-domain"
+H4,Explanation stability deteriorates under degradation and can signal failures,Supported as offline robustness evidence,Phase 3E,Runtime prototype gates failed in Phases 3F–3G
+H5,A combined scalar trust score outperforms predictive probability alone,Not supported,"Phase 3B exploratory; Phase 3F","Final architecture keeps trust signals explicit and hierarchical"

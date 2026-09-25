@@ -78,6 +78,20 @@ The included scenarios are simulated demonstrations of research-observed regimes
 
 See [demo/README.md](demo/README.md) and [docs/demonstrator.md](docs/demonstrator.md).
 
+## Publication evidence package
+
+Phase 10 freezes the manuscript-facing evidence structure. The publication package is regenerated from the original phase result CSVs rather than from hand-copied headline numbers.
+
+It includes:
+
+- final claim-to-evidence and hypothesis-disposition tables;
+- manuscript results ordering;
+- figure captions and figure source mapping;
+- publication-safe claim language;
+- the negative results that constrain the final architecture.
+
+See [publication/README.md](publication/README.md) and [docs/phase10_publication_evidence.md](docs/phase10_publication_evidence.md).
+
 ## Datasets
 
 Primary development dataset:
