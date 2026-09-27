@@ -1,10 +1,12 @@
 # TrustTwin publication package
 
-Phase 10 freezes the manuscript-facing evidence set.
+Phase 10 created the first manuscript-facing evidence set.
 
-## Publication assets produced
+> **Correction notice, 27 September 2026:** the original Phase 10 Figure 7 and Phase 7 prose were based on a 12-second-column split. Phase 7A/7B has since been rerun with reconstructed 60-second parent acquisitions kept intact. See `publication/corrections/phase7_acquisition_grouping.md`. The legacy Phase 7 bundle remains archived as provenance; corrected values supersede it for manuscript claims.
 
-The archival Phase 10 package contains nine publication figures in both PNG and SVG form:
+## Publication assets
+
+The Phase 10 package contains figures covering:
 
 1. representation robustness by held speed;
 2. leave-one-condition-out family generalisation;
@@ -12,11 +14,9 @@ The archival Phase 10 package contains nine publication figures in both PNG and 
 4. explanation-instability versus low-confidence error detection;
 5. OOD performance in represented operation versus joint operating shift;
 6. negative unsynchronised multimodal late-fusion result;
-7. global split-conformal coverage and review rate;
+7. split-conformal coverage and review rate — **legacy Figure 7 must be replaced by the acquisition-grouped correction before submission**;
 8. independent UCI hydraulic diagnostic performance;
 9. independent UCI hydraulic review burden.
-
-The figures are generated from exact phase result CSV files rather than manually transcribed values.
 
 ## Main source phases
 
@@ -25,20 +25,9 @@ The figures are generated from exact phase result CSV files rather than manually
 - Phases 4A–4B — unknown-fault OOD and joint shift;
 - Phases 5A–5C — representation repeatability, resampling and condition holdout;
 - Phase 6A — multimodal late fusion;
-- Phases 7A–7B — calibration failure and conformal abstention;
+- Phase 7A/7B — acquisition-grouped calibration and conformal abstention correction;
 - Phase 8A — independent hydraulic workflow replication.
-
-## Manuscript structure
-
-See:
-
-- `docs/phase10_publication_evidence.md`;
-- `publication/manuscript_results_outline.md`;
-- `publication/figure_captions.md`;
-- `publication/claim_language_guide.md`;
-- `publication/table_hypothesis_disposition.csv`;
-- `publication/table_runtime_component_disposition.csv`.
 
 ## Integrity rule
 
-No Phase 10 figure represents a new experiment. Phase 10 is a publication synthesis of already frozen result artifacts.
+Publication synthesis must preserve negative findings and methodological corrections. Superseded results remain visible in provenance rather than being silently overwritten.

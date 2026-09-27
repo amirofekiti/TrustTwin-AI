@@ -12,7 +12,7 @@
 
 **Figure 6. Unsynchronised multimodal late fusion (Phase 6A).** Equal late fusion of vibration and one phase-current channel underperforms vibration alone; the multimodal-improvement hypothesis is therefore not supported in this design.
 
-**Figure 7. Global split-conformal coverage and review rate in-domain (Phase 7B).** Empirical coverage follows the requested operating points reasonably closely. The 95% setting is retained as the candidate in-domain abstention rule, while the low error count prevents a zero-error safety claim.
+**Figure 7. Acquisition-grouped global split-conformal coverage and review rate (corrected Phase 7B).** Parent 60-second acquisitions are kept intact across train, calibration and test. Global 95% LAC achieves mean empirical coverage 0.955 and mean review rate 0.0458 across five splits; mean singleton accuracy is 0.999, but two of five observed base errors remain incorrect singleton decisions. The result supports approximately nominal in-domain marginal coverage, not perfect error capture.
 
 **Figure 8a. Independent UCI hydraulic diagnostic replication (Phase 8A).** Diagnostic competence varies substantially across targets, from perfect cooler classification to a weak valve classifier.
 

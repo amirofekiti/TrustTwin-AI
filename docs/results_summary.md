@@ -2,6 +2,8 @@
 
 Original result-bundle SHA-256 values are recorded in `provenance/result_bundles.sha256`.
 
+> **Methodological correction, 27 September 2026:** the legacy Phase 7 train/calibration/test split treated 12-second CSV columns as independent source traces. The NLN-EMP data documentation states that each 60-second vibration acquisition is stored as five consecutive 12-second columns. Phase 7A/7B was therefore rerun with reconstructed 60-second parent acquisitions kept intact. The corrected Phase 7 values below supersede the legacy Phase 7 manuscript claims; the legacy bundle remains archived as provenance.
+
 ## Diagnostic representation
 
 - **Phase 2C:** frozen 11-class order-envelope RF mean BAcc ≈ **0.699**.
@@ -26,10 +28,15 @@ Phase 3E explanation-instability error AUROC reached ≈ **0.952** for random dr
 
 Phase 6A: vibration-only BAcc ≈ **0.648**, current-only ≈ **0.222**, equal late fusion ≈ **0.469**.
 
-## Calibration and conformal abstention
+## Calibration and conformal abstention — acquisition-grouped correction
 
-- **Phase 7A:** temperature scaling became degenerate and intended selective thresholds collapsed.
-- **Phase 7B:** global 95% LAC empirical coverage ≈ **95.64%**, review rate ≈ **4.36%**, and both observed base errors were routed to review.
+The corrected Phase 7 rerun reconstructs one 60-second parent acquisition as five consecutive 12-second CSV columns from the same source file. It retains **224 complete parent acquisitions / 1,120 complete 12-second chunks** and excludes **9 trailing incomplete chunks**.
+
+- **Phase 7A corrected:** raw RF mean test BAcc ≈ **0.996**. Temperature scaling improves aggregate in-domain NLL/ECE, but three of five fitted temperatures remain at the lower search boundary near 0.05 and calibration-derived selective-coverage targets do not transfer exactly to test coverage. The corrected conclusion is therefore **unstable/saturated confidence scaling and poor selective-coverage control**, not blanket in-domain calibration failure.
+- **Phase 7B corrected:** global 95% LAC mean empirical coverage ≈ **0.955**, mean review rate ≈ **0.0458**, mean singleton accuracy ≈ **0.999**, and minimum replicate coverage ≈ **0.931**. Five base-classifier errors were observed; **3/5** were routed to review and **2/5** were issued as incorrect singletons. The previous claim that all observed errors were caught by review is withdrawn.
+- For completeness, the pre-specified global 99% LAC operating point achieved mean empirical coverage ≈ **0.988**, mean review rate ≈ **0.0240**, and routed all five observed base errors to review. This is reported as an evaluated operating point, not retroactively substituted for the previously selected 95% candidate.
+
+The Phase 3A held-speed calibration analysis was also audited with parent-acquisition grouping inside the familiar-speed train/calibration pool. Its central conclusion survives: calibration/absolute confidence thresholds learned under familiar speeds do not transfer reliably to unseen-speed data, and temperature scaling worsened NLL on all three corrected held-speed folds.
 
 ## Independent replication
 

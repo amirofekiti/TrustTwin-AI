@@ -2,9 +2,9 @@ Component,Final status,Evidence,Reason
 Operating-domain support,Retained,Phase 4B,Must precede predictive OOD interpretation
 Sensor-health evidence,Retained,Phases 3C–3D,Separate from classifier confidence
 Predictive OOD/novelty,Retained conditionally,Phases 4A–4B,Use only within represented operating support
-Global 95% LAC conformal,Retained candidate,"Phase 7B + Phase 8A","In-domain abstention; not universal coverage guarantee"
+Global 95% LAC conformal,Retained candidate with corrected limitation,"Corrected Phase 7B + Phase 8A","Approximately nominal in-domain coverage; corrected Phase 7B did not catch every observed base error"
 Paired explanation stability,Offline only,Phase 3E,"Robustness/audit evidence, not runtime gate"
 Explanation prototype gate,Rejected,Phases 3F–3G,Failed clean rejection / stopping criteria
-Temperature-scaled confidence gate,Rejected,"Phases 3A, 7A","Unsafe under shift; degenerate in easy in-domain calibration"
+Temperature-scaled confidence gate,Not retained as runtime gate,"Phase 3A acquisition-group audit; corrected Phase 7A","Fails under unseen-speed shift; in-domain scaling improves aggregate metrics but produces saturated/unstable confidence and poor selective-coverage control"
 Opaque scalar trust score,Rejected,"Phase 3B + 3F",Signals fail differently across regimes
 Unsynchronised current-vibration fusion,Rejected as primary path,Phase 6A,Did not outperform vibration
