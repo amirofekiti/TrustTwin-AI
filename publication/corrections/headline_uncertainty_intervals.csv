@@ -1,0 +1,7 @@
+estimate,unit,n_units,method,mean,ci95_low,ci95_high
+Phase5A paired mean BAcc improvement,"RF seed (paired across representations; mean across 3 held speeds)",10,100000-replicate percentile bootstrap over seeds,0.3709090909090909,0.36242424242424243,0.38080808080808083
+Phase4A entropy mean AUROC,held-out fault family,11,100000-replicate percentile bootstrap over held-out families,0.9404988749950285,0.88787238,0.98155649
+Phase4A entropy mean known-test FAR,held-out fault family,11,100000-replicate percentile bootstrap over held-out families,0.04397328791405477,0.0206816,0.07135566
+Phase4B entropy mean AUROC,"held-out fault-family cluster (3 speed folds retained together)",11,100000-replicate cluster bootstrap over held-out families,0.6558114478114477,0.59039731,0.72227643
+Phase4B entropy mean known unseen-speed FAR,"held-out fault-family cluster (3 speed folds retained together)",11,100000-replicate cluster bootstrap over held-out families,0.7872727272727272,0.71272727,0.86464646
+Phase7 global 95% segment empirical coverage,acquisition-grouped split replicate,5,two-sided t interval across five predeclared split replicates,0.9549090909090909,0.9188444398507483,0.9909737419674336
