@@ -1,0 +1,4 @@
+speed,condition,n_complete_acquisitions,phase7_allocation_status
+50,impeller 1,2,training_only
+50,soft foot 1,2,training_only
+100,impeller 2,1,training_only
