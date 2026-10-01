@@ -1,0 +1,7 @@
+method,nominal_coverage,mean_empirical_coverage,mean_review_rate,interpretation
+global_lac,0.90,0.885,0.115,finite threshold
+global_lac,0.95,0.955,0.0458,primary segment-level operating point
+global_lac,0.99,0.988,0.0240,finite sensitivity point
+mondrian_lac,0.90,0.895,0.105,finite class-conditional thresholds
+mondrian_lac,0.95,0.925,0.0785,finite class-conditional thresholds
+mondrian_lac,0.99,1.00,1.00,canonical finite-sample rule gives full six-class set because class-specific calibration counts are insufficient
